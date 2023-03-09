@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cloud Computing</title>
+
+    {{!-- Bootstrap --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  </head>
+   <a class="navbar-brand" style="color:rgb(4, 191, 228)" href="/">Home</a>
+  <body>
+    <h1 style="color: ;green">Edit Toy</h1>
+    <form class="card p-3 bg-light text-center mt-3 mb-3" action="/edit" method="post">
+    <input type="hidden" name="id" value="{{toy._id}}">
+            <div class="form-group">
+                <label class="h3 text-secondary">Name</label> <input type="text" name="txtName" value="{{toy.name}}" class="form-control" required><label style="color: red;">{{results.nameError}}</label></div>
+            <div class="form-group">
+                <label class="h3 text-secondary">Price</label><input type="text" name="txtPrice" value="{{toy.price}}" class="form-control" required $><label style="color: red;">{{results.priceError}}</label></div>
+            <div class="form-group">
+                <label class="h3 text-secondary">Picture URL</label><input type="text" name="txtPic" value="{{toy.picture}}"class="form-control" required ></div>
+            <div class="form-group">
+                <label class="h3 text-secondary">Year</label><input type="text" name="txtYear" value="{{toy.year}}" class="form-control" required></div>
+            <div class="form-group">
+                <label class="h3 text-secondary">Quantity</label><input type="text" name="txtQuantity" value="{{toy.quantity}}" class="form-control" required><label style="color: red;">{{results.quantityError}}</label></div>
+        <input type="submit" value="Update Product" style="color: orange;">
+    </form>
+</body>
+</html>
